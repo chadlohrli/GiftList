@@ -23,4 +23,6 @@ async function main(name) {
   console.log({ gift });
 }
 
-main("Anna Stehr");
+var name = process.argv.slice(2)[0]
+console.log(`checking if ${name} is on the nice list :)`)
+main(name);

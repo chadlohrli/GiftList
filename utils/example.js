@@ -7,6 +7,8 @@ const merkleTree = new MerkleTree(niceList);
 
 // get the root
 const root = merkleTree.getRoot();
+// log the root
+console.log(`merkle root: ${root}`)
 
 // find the proof that norman block is in the list 
 const name = 'Norman Block';
@@ -17,3 +19,4 @@ const proof = merkleTree.getProof(index);
 console.log( verifyProof(proof, name, root) ); // true, Norman Block is in the list!
 
 // TRY IT OUT: what happens if you try a name not in the list, or a fake proof?
+console.log( verifyProof(proof, "dfgjld345", root) ) // fasle, random string not in list

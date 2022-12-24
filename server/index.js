@@ -17,7 +17,7 @@ app.post('/gift', (req, res) => {
   // parse params
   // TODO: check if correct params are passed in
   let proof = body.proof
-  let name = body.proof
+  let name = body.name
 
   // TODO: prove that a name is in the list 
   const isInTheList = verifyProof(proof, name, MERKLE_ROOT)
